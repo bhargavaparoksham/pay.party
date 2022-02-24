@@ -37,7 +37,7 @@ import Onboard from "bnc-onboard";
 import { EthersAdapter } from "@gnosis.pm/safe-core-sdk";
 const { ethers } = require("ethers");
 
-// let targetNetwork = NETWORKS[process.env.REACT_APP_NETWORK_NAME]; //rinkeby; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+//let targetNetwork = NETWORKS[process.env.REACT_APP_NETWORK_NAME]; //rinkeby; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 const DEBUG = false;
 const NETWORKCHECK = true;
@@ -69,10 +69,11 @@ const mainnetInfura = navigator.onLine
   : null;
 // ( ⚠️ Getting "failed to meet quorum" errors? Check your INFURA_ID
 
-// as you deploy to other networks you can set REACT_APP_PROVIDER=https://dai.poa.network in packages/react-app/.env
+//as you deploy to other networks you can set REACT_APP_PROVIDER=https://dai.poa.network in packages/react-app/.env
 const localProviderUrlFromEnv = targetNetwork.rpcUrl;
 if (DEBUG) console.log("🏠 Connecting to provider:", localProviderUrlFromEnv);
 const localProvider = new ethers.providers.StaticJsonRpcProvider(localProviderUrlFromEnv);
+
 
 // 🔭 block explorer URL
 export const blockExplorer = targetNetwork.blockExplorer;
